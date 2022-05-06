@@ -53,10 +53,11 @@
                         <a href="#" class="header-logo">
                             <img src="img/header/header_logo7.png" alt="" class="header-logo__img">
                         </a>
+                        <button class="catalog__more catalog__more--header" data-modal="consultation">Бесплатная консультация</button>
                         <div class="header-contacts">
                             <p class="header-contacts__text">Мой телефон</p>
-                            <p class="header-contacts__phone">+7 (922) 136 00 90</p>
-
+                            <!-- <p class="header-contacts__phone">+7 (922) 136 00 90</p> -->
+                            <a href="tel:+79221360090" class="header-contacts__phone">+7 (922) 136 00 90</a>
                         </div>
                         <div class="header-times">
                             <p class="header-times__text">Я работаю</p>
@@ -127,9 +128,10 @@
             <li class="aside-menu__item"><a href="#contact" class="aside-menu__link">Контакты</a></li>
         </ul>
 
-        <div class="header-contacts">
+        <div class="header-contacts header-contacts--aside">
             <p class="header-contacts__text">Мой телефон</p>
-            <p class="header-contacts__phone">+7 (922) 136 00 90</p>
+            <a href="tel:+79221360090" class="header-contacts__phone">+7 (922) 136 00 90</a>
+            <!-- <p class="header-contacts__phone">+7 (922) 136 00 90</p> -->
 
         </div>
 
@@ -138,6 +140,9 @@
             <p class="header-times__text">Я работаю</p>
             <p class="header-times__data">ПН - СУБ: 10:00 - 18:00</p>
         </div>
+
+        <button class="catalog__more catalog__more--aside" data-modal="consultation">Бесплатная консультация</button>
+        
     </aside>
 
 
@@ -203,7 +208,7 @@
     </div> -->
 
 
-    <section class="promo">
+    <!-- <section class="promo">
 
         <div class="container">
             <h1 class="title title_fz48 promo__title">Частный мастер по ремонту пк и ноутбуков в Кургане</h1> 
@@ -212,7 +217,7 @@
                 <a href="#" class="promo__link" data-modal="consultation">Бесплатная консультация</a>
             </div>     
         </div>
-    </section>
+    </section> -->
 
    <section class="about" id="about">
         <div class="container">
@@ -240,19 +245,21 @@
                             </p>
                         </div>
                     </div>
+
                     <div class="about__skills-item">
                         <div class="about__skills-circle">
-                            <img src="icons/about_me/mobile_dev.svg" alt="mobile-dev">
+                            <img src="icons/about_me/fifti.png" alt="design">
                         </div>
                         <div>
                             <div class="title title_fz14">
-                                Гарантия до 1 года
+                                Дешевли фирм на 50 %
                             </div>
                             <p class="about__skills-text">
-                                Благодаря гарантии вы сможете в любое время позвонить и договориться о БЕСПЛАТНОМ ремонте. Скидки зависят от сложности ремонта, но 10% скидка предоставляется в любом случае.
+                                Не трачу деньги на аренду офиса и персонал, что позволяет держать цены на 50% ниже чем у конкурентов.
                             </p>
                         </div>
                     </div>
+
                     <div class="about__skills-item">
                         <div class="about__skills-circle">
                             <img src="icons/about_me/design.svg" alt="design">
@@ -263,6 +270,20 @@
                             </div>
                             <p class="about__skills-text">
                                 Скидки зависят от сложности ремонта, но оформляя заказ через сайт 10% скидка предоставляется в любом случае. Так же для пенсионеров предоставляется скидка 20% от стоимости ремонта
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="about__skills-item">
+                        <div class="about__skills-circle">
+                            <img src="icons/about_me/mobile_dev.svg" alt="mobile-dev">
+                        </div>
+                        <div>
+                            <div class="title title_fz14">
+                                Гарантия до 1 года
+                            </div>
+                            <p class="about__skills-text">
+                                Благодаря гарантии вы сможете в любое время позвонить и договориться о БЕСПЛАТНОМ ремонте.
                             </p>
                         </div>
                     </div>
@@ -382,6 +403,285 @@
         </div>
     </section>
 
+
+
+
+
+
+
+
+
+
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <h2 class="catalog__title">Каталог</h2>
+            <div class="catalog__divider"></div>
+            <div class="tabs__wrapper">
+                <div class="catalog__tabs">
+                    <a href="#common-tab" class="catalog__tab catalog__tab--active">Общие услуги</a>
+                    <a href="#notebook-tab" class="catalog__tab">Ремонт ноутбуков</a>
+                    <a href="#pc-tab" class="catalog__tab">Ремонт компьютеров</a>
+                    
+                </div>
+            </div>
+
+            <div class="catalog__container">
+                <div class="catalog__content" id="pc-tab">
+                    <div class="catalog-item">
+                        <img src="img/catalog/slow.jpg" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Устранение медленной работы компьютера</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 700 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/clean_pc.png" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Чистка компьютера от пыли</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 500 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/blue-screen.jpg" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Устранение синего экран на компьютере</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">От 700 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/USB-PC.jpg" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Замена портов / гнезд компьютера</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">1000 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/high-temperature.png" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Устранение перегрева и самовыключения ПК</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 700 руб.</div>
+                            <button class="catalog-item__btn">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/BP.jpg" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Ремонт / замена блока питания компьютера</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 500 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/modernization.jpg" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Модернизация компьютера</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 700 руб.</div>
+                            <button class="catalog-item__btn">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/ssd.jpg" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Замена hdd / ssd компьютера</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 300 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="catalog__content" id="notebook-tab">
+                    <div class="catalog-item">
+                        <img src="img/catalog/clean.png" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Чистка ноутбука от пыли</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 500 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/termopasta.png" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Замена термопасты</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 500 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/korpus.png" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Ремонт / замена корпуса ноутбука</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 700 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/display.png" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Замена матрицы ноутбука</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 700 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/petli.png" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Ремонт / замена петель ноутбука</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 700 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/usb.png" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Замена портов / гнезд ноутбука</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 650 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/hdd_ssd.png" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Замена hdd / ssd ноутбука</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 350 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/motherboard.png" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Ремонт / замена материнской платы</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 900 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="catalog__content catalog__content--active" id="common-tab">
+                    <div class="catalog-item">
+                        <img src="img/catalog/windows_img.jpg" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Установка Windows</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 700 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/virus_img.png" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Удаление вирусов</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 350 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/office_img.jpg" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Установка программ</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 350 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/internet.png" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Настройка интернет соединения</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 550 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/printer_repair.png" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Подключение и настройка периферийных устройств</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 450 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/password.png" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Cброс забытого пароля</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 450 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/data_recovery_img.png" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Восстановление данных</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 900 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item">
+                        <img src="img/catalog/registration.png" alt="" class="catalog-item__img">
+                        <h3 class="catalog-item__title">Помощь в регистрации на сайтах</h3>
+                       
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__price">от 250 руб.</div>
+                            <button class="catalog-item__btn" data-modal="order">Заказать</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <button class="catalog__more" data-modal="consultation">Подробнее</button>
+        </div>
+    </section>
+
+
+
+
+<!-- 
     <section class="price" id="catalog">
         <div class="container">
             <h2 class="title title_fz16 title__section-title">Прайс-лист</h2>
@@ -486,19 +786,22 @@
             <div class="price__btns">
                 <button data-modal="consultation" class="btn">Подробнее</button>
             </div>
-
-            
         </div>
-    </section>
+    </section> -->
+
+
+
+
+
 
     <section class="reviews" id="reviews">
         <div class="container">
 
-            <div class="title title_fz20 reviews__title">Отзывы наших клиентов</div>
+            <div class="title title_fz20 reviews__title">Отзывы моих клиентов</div>
             <div class="reviews__divider"></div>
-            <div class="title title_fz16 reviews__subtitle">Мы всегда стараемся помочь клиентам, что бы они обращались к нам снова</div>
+            <div class="title title_fz16 reviews__subtitle">Я всегда стараюсь помочь клиентам, что бы они обращались ко мне снова</div>
             <div class="reviews__inner">
-                <div class="reviews__item">
+<!--                 <div class="reviews__item">
                     <div class="reviews__item-img"><img src="img/reviews/feed_1.png" alt=""></div>
                     <div class="reviews__item-title">Ирина Иванченко</div>
                     <div class="reviews__item-descr">
@@ -532,10 +835,30 @@
                     <div class="reviews__item-title">Тамара Павловна</div>
                     <div class="reviews__item-descr">
                         Дважды обращался к мастеру Евгению с 3-мя аппаратами. Два lg g3 и ноутбук сына. Перед этим, телефоны были в другом сервисе и там их поднять мне так и не смогли. Один не включался совсем, второй не ловил wi-fi. Думал уже всё, в помойку выкидывать. Но всё таки решил еще раз попробовать и не прогадал, что сдал их именно этому мастеру. Через два дня оба были готовы и цена была адекватная.</div>
+                </div> -->
+
+                <div class="reviews__item">
+                    <div class="reviews__item-img"><img src="img/reviews/rew1.jpg" alt=""></div>
                 </div>
+
+                <div class="reviews__item">
+                    <div class="reviews__item-img"><img src="img/reviews/rew2.jpg" alt=""></div>
+                </div>
+
+                <div class="reviews__item">
+                    <div class="reviews__item-img"><img src="img/reviews/rew3.jpg" alt=""></div>
+                </div>
+
+                <div class="reviews__item">
+                    <div class="reviews__item-img"><img src="img/reviews/rew4.jpg" alt=""></div>
+                </div>
+
+                <div class="reviews__item">
+                    <div class="reviews__item-img"><img src="img/reviews/rew5.jpg" alt=""></div>
+                </div>
+
             </div>
         </div>  
-            <div class="reviews__divider bottom"></div>
     </section>
 
 
@@ -578,6 +901,42 @@
             
         </div>
     </section>
+
+    <section class="questions">
+        <div class="container">
+            <div class="questions__inner">
+                <div class="questions__title">Часто задаваемые вопросы</div>
+                <div class="questions__divider"></div>
+                <ul class="questions__list">
+
+                    <li class="questions__item">
+                        <div class="questions__item-title">Бесплатная ли диагностика</div>
+                        <div class="questions-box">
+                            <img src="img/question/question2.jpg" alt="" class="questions-box__img">
+                            <div class="questions-box__decr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid exercitationem quo quod nam tenetur pariatur accusantium, et illum soluta nesciunt atque libero alias? Ut animi fugiat asperiores, rem dolore debitis!</div>
+                        </div>  
+                    </li>
+
+                    <li class="questions__item">
+                        <div class="questions__item-title">Сколько будет длиться ремонт</div>
+                        <div class="questions-box">
+                            <img src="img/question/question3.jpg" alt="" class="questions-box__img">
+                            <div class="questions-box__decr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid exercitationem quo quod nam tenetur pariatur accusantium, et illum soluta nesciunt atque libero alias? Ut animi fugiat asperiores, rem dolore debitis!</div>
+                        </div>  
+                    </li>
+
+                    <li class="questions__item">
+                        <div class="questions__item-title">Сколько будет стоить ремонт</div>
+                        <div class="questions-box">
+                            <img src="img/question/question4.webp" alt="" class="questions-box__img">
+                            <div class="questions-box__decr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid exercitationem quo quod nam tenetur pariatur accusantium, et illum soluta nesciunt atque libero alias? Ut animi fugiat asperiores, rem dolore debitis!</div>
+                        </div>  
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
 
     <section class="contacts" id="contact">
         <div class="container">
@@ -644,6 +1003,7 @@
             </div>
             <button class="btn modal__btn">Оформить заказ</button>
         </form>
+        <div class="modal__agreement">Нажимая кнопку "Оформить заказ” Вы соглашаетесь на обработку <a href="policy.html">персональных данных</a></div>
     </div>
 
 
@@ -658,6 +1018,7 @@
             </div>
             <button class="btn modal__btn">Заказать консультацию</button>
         </form>
+        <div class="modal__agreement">Нажимая кнопку "Заказать консультацию” Вы соглашаетесь на обработку <a href="policy.html">персональных данных</a></div>
     </div>
 
 
@@ -668,11 +1029,12 @@
         <div class="title title_fz14 modal__subtitle">Я скоро с вами свяжусь!</div>
     </div>
 
+    <!-- <button class="catalog__more catalog__more--fixed" data-modal="consultation">Бесплатная консультация</button> -->
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <script type="text/javascript" src="https://spikmi.com/Widget?Id=5299"></script>
+   <!--  <script type="text/javascript" src="https://spikmi.com/Widget?Id=5299"></script> -->
     <script src="js/script.js"></script>
 
 </body>
