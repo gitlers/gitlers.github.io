@@ -12,34 +12,44 @@
 .modal {
     display: none;
     position: fixed;
-    padding: 40px 30px 10px 40px;
+    padding: 50px 30px 10px 40px;
     width: 400px;
-    min-height: 300px;
-    border: 1px solid black;
+    min-height: 380px;
+    border-radius: 15px;
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
-    background-color: #f2f2f2;
+    background-color: #fff;
     z-index: 3;
     
-
+    &__agreement{
+        text-align: center;
+        margin-top: 10px;
+        font-size: 11px;
+        line-height: 21px;
+    }
 
     &__subtitle{
         margin-top: 10px;
         margin-bottom: 10px;
+        text-align: center;
+    }
+    &__title{
+        text-align: center;
     }
     &__input{
         input {
             width: 100%;
             height: 50px;
             border-radius: 5px;
-            background-color: #ffffff;
             margin-bottom: 10px;
             border: none;
             padding: 0 20px;
             color: #4b4b4b;
             font-size: 14px;
             font-weight: 300;
+            background-color: #fbfbfb;
+            box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.1)
         }
         margin-bottom: 10px;
     }
@@ -56,7 +66,6 @@
         width: 100%;
         border-radius: 10px;
         color: #fff;
-        border-radius: 5px;
         &:focus{
             outline: none;
             

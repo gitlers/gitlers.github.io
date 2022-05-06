@@ -1,0 +1,92 @@
+.questions{
+    &__inner{
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+    &__title{
+        position: relative;
+        font-size: 26px;
+        line-height: 30px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 40px;
+        @include before_circle;
+        &:before{
+            top: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__divider{
+        margin: 0 auto;
+        margin-top: 25px;
+        margin-bottom: 50px;
+        width: 100px;
+        height: 3px;
+        background-color: $main-color;
+    }
+    &-box{
+        display: none;
+        align-items: center;
+        padding-left: 40px;
+        margin-bottom: 20px;
+        
+        &__img{
+            width:400px;
+            height: 200px;
+            object-fit: contain; // object-fit: cover;
+            margin-right: 40px;
+        }
+        
+        &__decr{
+            display: inline-block;
+            width: calc(100% - 440px);
+        }
+    }
+    &__item{
+        &-title{
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 300;
+            box-shadow: 0 0 10px -3px #ccc, 0 0 10px -3px #e2e2e2, 1px 1px 0 0 #e2e2e2, -1px -1px 0 0 #e2e2e2, 1px -1px 0 0 #e2e2e2, -1px 1px 0 0 #e2e2e2;
+            padding-right: 40px;
+            margin-bottom: 30px;
+            &:after{
+                content: "";
+                position: absolute;
+                height: 30px;
+                width: 30px;
+                border-radius:50%;
+                background-color: #f79f00;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                
+            }
+            &:before{
+                content: "";
+                position: absolute;
+                height: 8px;
+                width: 12px;
+                right: 24px;
+                top: 43%;
+                transform: translateY(-43%);
+                background-image: url('../icons/question/up_icons.svg');
+                z-index: 2;
+                transform: rotate(180deg);
+            }
+            &--active{
+                &:before{
+                    content: "";
+                    position: absolute;
+                    transform: rotate(0);
+                }
+            }
+        }
+    }
+
+}

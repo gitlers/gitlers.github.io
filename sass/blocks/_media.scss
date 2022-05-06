@@ -1,3 +1,14 @@
+@media (max-width: 1500px) {
+    .reviews {
+        .slick-prev.slick-arrow{
+            left: -5%;
+        }
+        .slick-next.slick-arrow{
+            right: -5%;
+        }
+
+    }
+}
 @media (max-width: 1439px) {
     .sidepanel {
         display: none;
@@ -70,6 +81,7 @@
         }
     }
     .promotion{
+        padding: 30px 0 60px 0;
         &__divider{
             margin-bottom: 60px;
         }
@@ -231,6 +243,9 @@
     .header-list__item{
         margin-right: 40px;
     }
+    .questions__inner{
+        margin-top: 60px;
+    }
 }
 
 
@@ -242,7 +257,12 @@
     .header-contacts{
         margin: 0 35px;
     }
-
+    .questions-box{
+        padding-left: 0;
+    }
+    .questions-box__decr{
+        width: calc(100% - 150px);
+    }
 }
 
 
@@ -253,6 +273,19 @@
 @media (max-width: 768px) {
     .container {
         max-width: 540px;
+    }
+    .questions__inner{
+        margin-bottom: 60px;
+    }
+
+    .catalog__tabs{
+        overflow-x: scroll;
+        display: flex;
+    }
+    .catalog__tab {
+        margin-right: 20px;
+        padding: 16px 13px;
+
     }
     .header-list__item{
         margin-right: 25px;
@@ -340,7 +373,7 @@
         }
     }
     .about {
-        padding-top: 40px;
+        /* padding-top: 40px; */
         &__wrapper {
             grid-template: 400px auto auto / 1fr;
         }
@@ -449,6 +482,21 @@
 
 
 @media (max-width: 700px) {
+    .catalog__more.catalog__more--header{
+        margin-bottom: 6px;
+    }
+    .questions-box__decr{
+        width: calc(100% - 270px);
+    }
+    .questions-box{
+        margin-right: 0;
+    }
+    .questions-box__img{
+        margin-right: 20px;
+    }
+    .about {
+        padding-top: 100px; 
+    }
     .aside-menu{
         .header-times{
             display: block;
@@ -490,7 +538,21 @@
     }
 }
 
+@media (max-width: 600px) {
+    .questions-box__decr{
+        width: 100%
+    }
+    .questions-box__img{
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .questions-box{
+        flex-wrap: wrap;
+        justify-content: center;
 
+    }
+}
 
 
 
@@ -534,6 +596,9 @@
         }
         &__skills {
             grid-template-columns: 1fr;
+        }
+        &__skills-item {
+            grid-template-columns: 40px 300px;
         }
     }
     .resume {
@@ -584,7 +649,7 @@
 
 
     .promotion{
-
+        padding: 30px 0 70px 0;
         &__wraper{
             grid-template-columns: repeat(auto-fit,360px);
             row-gap: 10px;
@@ -603,9 +668,14 @@
             font-size: 15px;
             line-height: 20px;
         }
+        &__divider{
+            margin-bottom: 40px;
+        }
 
     }
     .reviews{
+        padding-top: 80px;
+        padding-bottom: 40px;
         .slick-prev.slick-arrow{
             left: 30%;
         }
@@ -613,10 +683,11 @@
             right: 30%;
         }
         &__subtitle{
-            font-size: 12px;
+            font-size: 17px;
+            margin-bottom: 20px;
         }
-        &__divider.bottom{
-            margin-top: 30px;
+        &__item-img{
+            margin-bottom: 0;
         }
     }
 
@@ -654,7 +725,7 @@
             right: 26%;
         }
         &__subtitle{
-            font-size: 13px;
+            font-size: 15px;
         }
         &__divider.bottom{
             margin-top: 20px;
@@ -671,6 +742,15 @@
     .container {
         width: 100%;
         padding: 0 10px;
+    }
+    .questions__item-title{
+        font-size: 18px;
+        &:before {
+            right: 15px;
+        }
+        &:after{
+            right: 6px;
+        }
     }
 
     .promo {
@@ -721,10 +801,11 @@
 
     }
     .modal{
-        padding: 22px 30px 10px 21px;
-        width: 340px;
+        padding: 30px 30px 10px 21px;
+        width: 360px;
+        min-height: 350px;
         &__title{
-            font-size: 15px;
+            font-size: 17px;
         }
         &__subtitle{
             font-size: 13px;
@@ -750,17 +831,34 @@
 
 
 @media (max-width: 381px) {
+    .about {
+        padding-top: 80px; 
+    }
     .promo {
         padding-top: 180px;
+    }
+    .about {
+        &__skills-item {
+            grid-template-columns: 40px 240px;
+        }
+    }
+    .questions__inner{
+        margin-top: 50px;
     }
 }
 
 
 @media (max-width: 375px) {
+
     .container {
         width: 100%;
         padding: 0 10px;
     }
+
+    .catalog__tabs{
+        margin-bottom: 40px;
+    }
+
     .promo {
         &__link {
             width: 37%;
@@ -771,17 +869,22 @@
     }
 
     .modal{
-        padding: 22px 30px 10px 21px;
-        width: 295px;
+        padding: 35px 30px 10px 21px;
+        width: 330px;
         &__title{
-            font-size: 13px;
+            font-size: 16px;
         }
         &__subtitle{
-            font-size: 13px;
+            font-size: 12px;
         }
         &__close{
             top: -10px;
             right: 3px;
+        }
+        &__agreement{
+            margin-top: 15px;
+            font-size: 10px;
+            line-height: unset;
         }
     }  
 
@@ -793,7 +896,7 @@
             right: 22%;
         }
         &__subtitle{
-            font-size: 12px;
+            font-size: 14px;
         }
         &__divider.bottom{
             margin-top: 20px;
@@ -805,4 +908,13 @@
         }
     }
 
+}
+
+@media (max-width: 344px) {
+    .modal{
+        width: 300px;
+    }
+    .questions__item-title{
+        font-size: 17px;
+    }
 }

@@ -1,0 +1,167 @@
+.catalog{
+    margin-top: 70px;
+    &__content{
+        display: none;
+        &--active{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 260px);
+            grid-template-rows: repeat(2, 1fr);
+            justify-items: center;
+            justify-content: space-around;
+            column-gap: 15px;
+            row-gap: 40px;
+
+        }
+    }
+    &__divider{
+        width: 110px;
+        height: 3px;
+        background-color: $main-color;
+        margin: 0 auto;
+        margin-bottom: 62px;
+    }
+
+    &__more{
+        
+        display: block;
+        margin: 40px auto 0;
+        font-weight: 600;
+        padding:12px 45px;
+        font-size: 18px;
+        outline: none;
+        border: none;
+        border-radius: 26px;
+        background-color: #f79f00;
+        color: #FFFFFF;
+        &:focus{
+            outline: none;
+        }
+    }
+    &-item{
+        text-align: center;
+        position: relative; // тут
+        height: 370px;
+        background: #FFFFFF;
+        border: 2px solid #ECEEF7;
+        box-sizing: border-box;
+        border-radius: 15px;
+        padding: 36px 0;
+        padding-left: 25px;
+        padding-right: 15px;
+        &__img{
+            display: block;
+            width: 208px;
+            height: 173px;
+            object-fit: contain;
+            margin-bottom: 30px;
+            
+        }
+        &__title{
+            position: relative;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 140%;
+            color: #000000;
+            margin-bottom: 8px;
+        }
+        &__descr{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 140%;
+            color: #000000;
+            height: 62px;
+            
+        }
+        &__footer{
+            position: absolute;  // тут
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            bottom: 20px; // тут
+        }
+        &__btn{
+            font-weight: 600;
+            padding:12px 18px;
+            font-size: 14px;
+            outline: none;
+            border: none;
+            border-radius: 25px;
+            background-color: #f79f00;
+            color: #FFFFFF;
+            &:focus{
+                outline: none;
+            }
+            &:active{
+                transform: scale(0.8);
+            }
+            
+
+        }
+        &__price{
+            font-weight: 300;
+            font-size: 19px;
+            line-height: 140%;
+            color: #121146;
+
+
+            margin-right: 20px;  // тут
+
+
+
+        }
+        
+    }
+    &__title{
+        text-align: center;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 59px;
+        color: #000000;
+        margin-bottom: 30px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            width: 36px;
+            height: 36px;
+            border-radius: 100%;
+            background: $main-color;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+    }
+    &__tabs{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    &__tab{
+        display: inline-block;
+        padding: 16px 20px;
+        background: linear-gradient(0deg, #ECEEF6, #ECEEF6), #59AAF1;
+        border-radius: 45px;
+        margin-right: 31px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 140%;
+        color: #151515;
+        &:hover{
+            text-decoration: none;
+            color: #151515;
+        }
+        &:nth-last-child(1){
+            margin-right: 0;
+        }
+        &--active{
+            background: #f79f00;
+            color: #FFFFFF;
+            &:hover{
+                text-decoration: none;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
