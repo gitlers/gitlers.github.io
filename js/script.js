@@ -8,19 +8,35 @@ $(document).ready(function(){
         nextArrow: '<button type="button" class="slick-next"><img src="../icons/slider/next_arrow.png" alt=""></button>',
         prevArrow: '<button type="button" class="slick-prev"><img src="../icons/slider/back_arrow.png" alt=""></button>',
         responsive: [
+ 
+            {
+                breakpoint: 2000,
+                settings: {
+                    dots: true,
+                }
+            },
+            {
+                breakpoint: 1400,
+                settings: {
+                    arrows: false,
+                    dots: true,
+                }
+            },
             {
                 breakpoint: 1200,
                 settings: {
                     centerMode: true,
-                    centerPadding: '300px',
-                    slidesToShow: 1
+                    centerPadding: '310px',
+                    slidesToShow: 1,
+                    dots: true,
+                    arrows: false,
                 }
             },
             {
                 breakpoint: 993,
                 settings: {
                     centerMode: true,
-                    centerPadding: '70px',
+                    centerPadding: '180px',  // 70
                     slidesToShow: 1,
                     dots: true,
                     arrows: false,
@@ -30,7 +46,7 @@ $(document).ready(function(){
                 breakpoint: 768,
                 settings: {
                     centerMode: true,
-                    centerPadding: '10px',
+                    centerPadding: '100px', //10
                     slidesToShow: 1,
                     dots: true,
                     arrows: false,
@@ -48,11 +64,22 @@ $(document).ready(function(){
                 }
             },
             {
+                breakpoint: 576,
+                settings: {
+
+                    centerMode: true,
+                    centerPadding: '20px', // 20px
+                    slidesToShow: 1,
+                    dots: true,
+                    arrows: false,
+                }
+            },
+            {
                 breakpoint: 375,
                 settings: {
 
                     centerMode: true,
-                    centerPadding: '20px',
+                    centerPadding: '3px',
                     slidesToShow: 1,
                     dots: true,
                     arrows: false,
@@ -62,6 +89,7 @@ $(document).ready(function(){
     });
 
 });
+
 
 
 const burger = document.querySelector('.header__burger'),
@@ -77,32 +105,53 @@ const burger = document.querySelector('.header__burger'),
       modal__close = document.querySelectorAll('.modal__close'),
       promotion = document.querySelector('.promotion__descr');
 
-    
+let main_with = $(window).innerWidth();
 
 
 burger.addEventListener('click',()=>{
     asideMenu.classList.toggle('aside-menu--active');
     overlay.style.display = "block";
+    document.body.style.overflow = 'hidden';
 });   
 
 asideMenuClose.addEventListener('click',()=>{
     asideMenu.classList.toggle('aside-menu--active');
     overlay.style.display = "none";
+    document.body.style.overflow = 'visible';
 });
 
 asideMenuLink.forEach((item)=>{
     item.addEventListener('click', ()=>{
         asideMenu.classList.toggle('aside-menu--active');
         overlay.style.display = "none";
+        document.body.style.overflow = 'visible';
     })
 });
 
 window.addEventListener('scroll', ()=>{
     if(window.pageYOffset >= 10){
-        $('.header__inner').css("background-color", "rgba(0,0,0,0.7)")
+        $('.catalog__more.catalog__more--header').css("display", "block")
+        $('.header-logo').css("display", "none")
+/*         $('.header__inner').css("background-color", "rgba(0,0,0,0.7)") */
+        if(main_with <= 540) {
+            $('.header-contacts').css("display", "block")
+            $('.header-logo').css("display", "none")
+            $('.catalog__more.catalog__more--header').css("display", "none")
+
+        }
     }
     else {
-        $('.header__inner').css("background-color", "unset")
+        $('.catalog__more.catalog__more--header').css("display", "none")
+        $('.header-logo').css("display", "block")
+
+/*         $('.header__inner').css("background-color", "unset") */
+        if(main_with <= 540) {
+            $('.header-contacts').css("display", "none")
+            $('.header-logo').css("display", "block")
+            $('.header-contacts--aside').css("display", "block")
+            $('.catalog__more.catalog__more--header').css("display", "none")
+        }
+
     }
 })
 
@@ -121,6 +170,7 @@ consultation_btn.forEach((item) =>{
         modalСonsultation.style = 'display: block';
         overlay.style = 'display: block';
         document.body.style.overflow = 'hidden'
+        asideMenu.classList.remove('aside-menu--active');
     });
 });
 
@@ -145,7 +195,6 @@ modal__close.forEach((item)=>{
         $('form').trigger('reset');
     })
 });
-
 
 
 const deadline = '2022-01-30';
@@ -189,7 +238,7 @@ function setClock(selector, endtime) {
         hours.innerHTML = getZero(t.hours);
         minutes.innerHTML = getZero(t.minutes);
         seconds.innerHTML = getZero(t.seconds);
-        promotion.innerHTML = "Я ценю каждого клиента и предлагаю вам стать одним из них на очень выгодных условиях. Каждому, кто оформит заказ, будет предоставлена скидка в размере <span>30%!</span><br><br>Акция закончится  "+ (t.days+1)+"  Января в 00:00";
+        promotion.innerHTML = "Я ценю каждого клиента и предлагаю вам стать одним из них на очень выгодных условиях. Каждому, кто оформит заказ, будет предоставлена скидка в размере <span>30%!</span><br><br>Акция закончится 30 Января в 00:00";
 
         if (t.total <= 0) {
             clearInterval(timeInterval);
@@ -219,21 +268,36 @@ $('form').submit(function(e) {
     return false;
 });
 
-
-$(function(){
+/* $(function(){
         $("a[href^='#']").click(function(){
                 var _href = $(this).attr("href");
                 $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
                 return false;
         });
+}); */
+
+$('.catalog__tab').on('click', function(e){
+    e.preventDefault();
+    $($(this).siblings()).removeClass('catalog__tab--active');
+    $(this).addClass('catalog__tab--active');
+    $(".catalog__content").removeClass('catalog__content--active');
+    $($(this).attr('href')).addClass('catalog__content--active');
 });
 
 
+$('.questions__item-title').on('click', function(e){
+    $(this).toggleClass('questions__item-title--active');
+    $(this).next().slideToggle('200'); // очень важная вешь  скрывает и показывает при клике на какой то элеент следющий элемент
+    if($(this).next().css('display') == 'block') {
+        $(this).next().css('display', 'flex');
+        $(this).next().css('display', 'flex');
+
+    };
+});
 
 
 const WorksPathItemPayment = document.querySelector('.works-path__item--payment'),
       WorksPathItemDiagnostics = document.querySelector('.works-path__item--diagnostics');
-let main_with = $(window).innerWidth();
 if(main_with <= 768) {
     WorksPathItemPayment.innerHTML = 
     `           
